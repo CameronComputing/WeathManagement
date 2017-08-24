@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainCollectionCells" id="fio-ap-6wl" customClass="mainCollectionCells" customModule="Wealth_Management_Prototype">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="278"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="278"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vd5-Ic-rJb">
+                        <rect key="frame" x="1" y="35" width="345" height="212"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-Ms-myW">
+                        <rect key="frame" x="1" y="11" width="345" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-F9-PSP">
+                        <rect key="frame" x="1" y="255" width="345" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="19"/>
+                        </variation>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yKZ-F9-PSP" secondAttribute="bottom" constant="9" id="8BY-QH-vA1"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="trailing" secondItem="zyP-Ms-myW" secondAttribute="trailing" id="DhJ-we-pOF"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="leading" secondItem="fio-ap-6wl" secondAttribute="leading" constant="1" id="HYx-ED-pqO"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="centerX" secondItem="fio-ap-6wl" secondAttribute="centerX" id="KaK-FY-lTh"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="trailing" secondItem="yKZ-F9-PSP" secondAttribute="trailing" id="OiD-zT-zTa"/>
+                <constraint firstItem="zyP-Ms-myW" firstAttribute="top" secondItem="fio-ap-6wl" secondAttribute="top" constant="11" id="SaI-Hu-p8K"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="leading" secondItem="yKZ-F9-PSP" secondAttribute="leading" id="TnW-iA-T8G"/>
+                <constraint firstItem="yKZ-F9-PSP" firstAttribute="top" secondItem="Vd5-Ic-rJb" secondAttribute="bottom" constant="8" symbolic="YES" id="Vth-xJ-2MD"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="leading" secondItem="zyP-Ms-myW" secondAttribute="leading" id="XW9-Yq-32B"/>
+                <constraint firstItem="Vd5-Ic-rJb" firstAttribute="top" secondItem="zyP-Ms-myW" secondAttribute="bottom" constant="8" symbolic="YES" id="vsL-ZB-n4c"/>
+            </constraints>
+            <size key="customSize" width="347" height="278"/>
+            <connections>
+                <outlet property="imageView" destination="Vd5-Ic-rJb" id="3gz-Yf-d2u"/>
+                <outlet property="lblAddress" destination="yKZ-F9-PSP" id="U6b-Ma-JWd"/>
+                <outlet property="lblTitle" destination="zyP-Ms-myW" id="6V1-93-cjY"/>
+            </connections>
+            <point key="canvasLocation" x="5.5" y="-83"/>
+        </collectionViewCell>
+    </objects>
+</document>
