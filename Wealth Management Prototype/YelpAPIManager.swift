@@ -77,6 +77,8 @@ class YelpAPIManager: NSObject {
                             if url != nil{
                                 let data = try? Data(contentsOf: url!)
                                 image = UIImage(data: data!)!
+                            }else{
+                                image = UIImage(named: "imageplaceholder.png")!
                             }
                             let address1 = addresses["address1"] as? String
                             AppController.shared.Businesses.append(Business(title: businessName, address: address1!, id: id, rating: rating, image: image))
@@ -99,7 +101,6 @@ class YelpAPIManager: NSObject {
     ///This method does the business review call and parses it into the passes object
     /// - parameter business: The business object to search yelp API reviews.
     /// - parameter completion: escaping closer to see when call finishes.
-
     class func getYelpReviewResult(business:Business,completion: @escaping (_ statusCode: Int) -> Void ){
         let urlWithParameters = NSURLComponents(string: Constants.yelpInitialURL + business.id! + Constants.yelpReviewsURL)!
         var queryDetails: [String: String] = [:]
